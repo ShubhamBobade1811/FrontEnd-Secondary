@@ -1,0 +1,9 @@
+<form [formGroup]="loginForm" (ngSubmit)="save()">
+  <input type="text" formControlName="username" placeholder="Enter User Name"><br>
+  <input type="password" formControlName="password" placeholder="Enter Password"><br>
+  <input type="submit" value="save" [disabled]="loginForm.invalid">
+
+  <input type="button" value="AUTOFILL" (click)="autofill()">
+
+  <input type="reset" value="RESET" (click)="resetData()">
+</form>
